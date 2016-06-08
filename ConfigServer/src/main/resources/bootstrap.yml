@@ -8,7 +8,7 @@ spring:
           uri: https://github.com/KubeCloud/demo-itonk-gr4/
           searchPaths: 'cfg'
 server:
-  port: 8080
+  port: 8888
 ---
 spring:
   profiles: development
