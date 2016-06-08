@@ -1,7 +1,7 @@
 configuration:
   projectName: apigateway
 server:
-  port: 8000
+  port: 8080
 zuul:
   routes:
     items:

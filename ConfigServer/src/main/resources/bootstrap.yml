@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/MartenF/ITONK/
+          uri: https://github.com/KubeCloud/demo-itonk-gr4/
           searchPaths: 'cfg'
 server:  
   port: 8888
