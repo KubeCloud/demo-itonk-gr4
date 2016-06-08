@@ -1,0 +1,26 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "item-service",
+    "labels": {
+      "app": "item-service",
+      "tier": "backend",
+      "run": "item-service",
+      "visualize": "true"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "protocol": "TCP",
+        "port": 9000,
+        "targetPort": 9000
+      }
+    ],
+    "selector": {
+      "app": "item-service",
+      "tier": "backend"
+    }
+  }
+}

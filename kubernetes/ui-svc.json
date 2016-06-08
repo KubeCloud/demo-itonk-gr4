@@ -1,0 +1,27 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "ui",
+    "labels": {
+      "app": "ui",
+      "tier": "frontend",
+      "run": "ui",
+      "visualize": "true"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "protocol": "TCP",
+        "port": 80,
+        "targetPort": 80
+      }
+    ],
+    "externalIPs":["192.168.1.41"],
+    "selector": {
+      "app": "ui",
+      "tier": "frontend"
+    }
+  }
+}

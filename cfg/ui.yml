@@ -1,0 +1,9 @@
+configuration:  
+  projectName: ui
+server:
+  port: 80
+---
+spring:
+  profiles: development
+server:
+  port: 8080

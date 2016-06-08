@@ -1,0 +1,4 @@
+configuration:  
+  projectName: userservice
+server:
+  port: 9002

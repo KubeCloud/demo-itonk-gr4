@@ -1,0 +1,26 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "config-server",
+    "labels": {
+      "app": "config-server",
+      "tier": "backend",
+      "run": "config-server",
+      "visualize": "true"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "protocol": "TCP",
+        "port": 8888,
+        "targetPort": 8888
+      }
+    ],
+    "selector": {
+      "app": "config-server",
+      "tier": "backend"
+    }
+  }
+}

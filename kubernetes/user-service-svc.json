@@ -1,0 +1,26 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "user-service",
+    "labels": {
+      "app": "user-service",
+      "tier": "backend",
+      "run": "user-service",
+      "visualize": "true"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "protocol": "TCP",
+        "port": 9002,
+        "targetPort": 9002
+      }
+    ],
+    "selector": {
+      "app": "user-service",
+      "tier": "backend"
+    }
+  }
+}

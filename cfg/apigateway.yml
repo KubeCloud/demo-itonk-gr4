@@ -1,0 +1,38 @@
+configuration:
+  projectName: apigateway
+server:
+  port: 8000
+zuul:
+  routes:
+    items:
+      url: http://item-service:9000
+      path: /items/**
+      stripPrefix: false
+    orders:
+      url: http://order-service:9001
+      path: /orders/**
+      stripPrefix: false
+    users:
+      url: http://user-service:9002
+      path: /users/**
+      stripPrefix: false
+---
+spring:
+  profiles: development
+server:
+  port: 8000
+zuul:
+  routes:
+    items:
+      url: http://localhost:9000
+      path: /items/**
+      stripPrefix: false
+    orders:
+      url: http://localhost:9001
+      path: /orders/**
+      stripPrefix: false
+    users:
+      url: http://localhost:9002
+      path: /users/**
+      stripPrefix: false
+debug: true

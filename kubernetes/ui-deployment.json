@@ -1,0 +1,33 @@
+{
+  "kind": "Deployment",
+  "apiVersion": "extensions/v1beta1",
+  "metadata": {
+    "name": "ui",
+    "labels": {
+      "run": "ui",
+      "visualize": "true"
+    }
+  },
+  "spec": {
+    "replicas": 2,
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "ui",
+          "tier": "frontend",
+          "track": "stable",
+          "run": "ui",
+          "visualize": "true"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "ui",
+            "image": "sebastiansondergaard/itonk-ui"
+          }
+        ]
+      }
+    }
+  }
+}

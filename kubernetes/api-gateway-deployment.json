@@ -1,0 +1,33 @@
+{
+  "kind": "Deployment",
+  "apiVersion": "extensions/v1beta1",
+  "metadata": {
+    "name": "api-gateway",
+    "labels": {
+      "run": "api-gateway",
+      "visualize": "true"
+    }
+  },
+  "spec": {
+    "replicas": 2,
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "api-gateway",
+          "tier": "frontend",
+          "track": "stable",
+          "run": "api-gateway",
+          "visualize": "true"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "api-gateway",
+            "image": "sebastiansondergaard/itonk-api-gateway"
+          }
+        ]
+      }
+    }
+  }
+}

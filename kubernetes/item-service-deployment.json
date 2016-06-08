@@ -1,0 +1,33 @@
+{
+  "kind": "Deployment",
+  "apiVersion": "extensions/v1beta1",
+  "metadata": {
+    "name": "item-service",
+    "labels": {
+      "run": "item-service",
+      "visualize": "true"
+    }
+  },
+  "spec": {
+    "replicas": 2,
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "item-service",
+          "tier": "backend",
+          "track": "stable",
+          "run": "item-service",
+          "visualize": "true"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "item-service",
+            "image": "sebastiansondergaard/itonk-item-service"
+          }
+        ]
+      }
+    }
+  }
+}

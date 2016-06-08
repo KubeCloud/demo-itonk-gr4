@@ -1,0 +1,26 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "order-service",
+    "labels": {
+      "app": "order-service",
+      "tier": "backend",
+      "run": "order-service",
+      "visualize": "true"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "protocol": "TCP",
+        "port": 9001,
+        "targetPort": 9001
+      }
+    ],
+    "selector": {
+      "app": "order-service",
+      "tier": "backend"
+    }
+  }
+}
