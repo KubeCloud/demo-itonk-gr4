@@ -24,7 +24,7 @@
         "containers": [
           {
             "name": "order-service",
-            "image": "sebastiansondergaard/itonk-order-service"
+            "image": "kubecloud/demo-itonk-grp4-order-service:v1"
           }
         ]
       }

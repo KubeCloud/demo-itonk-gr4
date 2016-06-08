@@ -24,7 +24,7 @@
         "containers": [
           {
             "name": "user-service",
-            "image": "sebastiansondergaard/itonk-user-service"
+            "image": "kubecloud/demo-itonk-grp4-user-service:v1"
           }
         ]
       }

@@ -15,10 +15,10 @@
       {
         "protocol": "TCP",
         "port": 80,
-        "targetPort": 80
+        "targetPort": 8080
       }
     ],
-    "externalIPs":["192.168.1.41"],
+    "externalIPs":["192.168.1.11"],
     "selector": {
       "app": "ui",
       "tier": "frontend"

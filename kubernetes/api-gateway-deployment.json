@@ -24,7 +24,7 @@
         "containers": [
           {
             "name": "api-gateway",
-            "image": "sebastiansondergaard/itonk-api-gateway"
+            "image": "kubecloud/demo-itonk-grp4-api-gateway:v1"
           }
         ]
       }

@@ -24,7 +24,7 @@
         "containers": [
           {
             "name": "ui",
-            "image": "sebastiansondergaard/itonk-ui"
+            "image": "kubecloud/demo-itonk-grp4-ui:v1"
           }
         ]
       }

@@ -24,7 +24,7 @@
         "containers": [
           {
             "name": "config-server",
-            "image": "sebastiansondergaard/itonk-config-server"
+            "image": "kubecloud/demo-itonk-grp4-config-server:v1"
           }
         ]
       }
