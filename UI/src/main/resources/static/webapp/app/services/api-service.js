@@ -1,6 +1,7 @@
 'use strict';
 if (typeof api_url === 'undefined')
-  var api_url = 'http://192.168.1.41:8000/';
+  // var api_url = 'http://localhost:8000/';
+  var api_url = 'http://192.168.1.71:8000/';
 
 angular.module('ApiService', ['ngResource'])
   .service('Api', ['$resource', '$http', '$sce',
