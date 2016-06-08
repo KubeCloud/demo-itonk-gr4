@@ -3,6 +3,7 @@ package dk.au.itonk.gr4.controllers;
 import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
+import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
@@ -35,9 +36,8 @@ public class UserController {
     public UserController() {
         MongoClientOptions.Builder options = MongoClientOptions.builder();
         options.socketKeepAlive(true);
-        MongoClient mongoClient = new MongoClient("128.199.62.185:27017", options.build());
-
-        MongoDatabase database = mongoClient.getDatabase("itonk");
+        MongoClient mongoClient = new MongoClient("82.196.6.106:27017");
+        MongoDatabase database = mongoClient.getDatabase("kubecloud-gpr4");
         userCollection = database.getCollection("users");
 
         checkInitialUsers();
@@ -148,10 +148,10 @@ public class UserController {
         }
 
         List<Document> documentList = new ArrayList<>();
-        User aske = new User((long) 1, "Aske", "Wilkens", "Finlandsgade 24", "Aarhus", 8000, "Denmark", 86177777, "asketw@gmail.com", "12345678");
+        User aske = new User((long) 1, "Kasper", "Nissen", "Finlandsgade 24", "Aarhus", 8000, "Denmark", 87654321, "kaspernissen@gmail.com", "12345678");
         documentList.add(aske.getMongoDBDocument());
 
-        User sebastian = new User((long) 2, "Sebastian", "Søndergaard", "Grete Løchtes Gade 1", "Aarhus", 8000, "Denmark", 27599652, "sebastian.sondergaard@gmail.com", "12345678");
+        User sebastian = new User((long) 2, "Martin", "Jensen", "Finlandsgade 23", "Aarhus", 8000, "Denmark", 12345678, "martin2610@gmail.com", "12345678");
         documentList.add(sebastian.getMongoDBDocument());
 
         userCollection.insertMany(documentList);
