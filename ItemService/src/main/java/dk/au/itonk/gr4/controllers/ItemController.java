@@ -38,9 +38,8 @@ public class ItemController {
     public ItemController() {
         MongoClientOptions.Builder options = MongoClientOptions.builder();
         options.socketKeepAlive(true);
-        MongoClient mongoClient = new MongoClient("128.199.62.185:27017", options.build());
-
-        MongoDatabase database = mongoClient.getDatabase("itonk");
+        MongoClient mongoClient = new MongoClient("82.196.6.106:27017");
+        MongoDatabase database = mongoClient.getDatabase("kubecloud-gpr4");
         itemCollection = database.getCollection("items");
 
         checkInitialItems();
